@@ -13,3 +13,60 @@
 		- 数据操作符统一
 		- 高度非过程化
 		- 面向集合的操作方式
+- SQL基本概念
+	- SQL支持关系数据库三级模式结构
+	- 基本表
+		- 本身独立存在的表
+		- SQL中一个关系对应一个基本表
+		- 一个或多个基本表对应一个存储文件
+		- 一个表可以带若干索引
+	- 存储文件
+		- 逻辑结构组成了关系数据库的内模式
+		- 物理结构是任意的，对用户透明
+	- 视图
+		- 从一个或几个基本表导出的表
+		- 数据库中只存放使徒的定义而不存放视图对应的数据
+		- 视图是一个虚表
+		- 用户可以在视图上在定义视图
+- 数据定义
+	- 模式
+		- CREATE SCHEMA
+		- DROP SCHEMA
+		- 定义模式实际上定义了一个命名空间
+	- 表	
+		- CREATE TABLE
+		- ALTER TABLE
+		- DROP TABLE 
+	- 视图
+		- CREATE VIEW
+		- DROP VIEW
+	- 索引
+		- CREATE INDEX
+		- DROP INDEX
+	- CASCADE|RESTRICT
+		- CASCADE:级联
+			- 删除的同时把相关对象都删除
+		- RESTRICT:限制
+			- 若对象被其他对象引用，则不能执行删除操作
+- 建立索引
+	- 格式：CREATE [UNIQUE] [CLUSTER] INDEX <索引名> ON <表名> (<列名>[次序]，......)
+	- 次序包括 **ASC**(升序)和 **DESC**(降序）
+- DISTINCT关键字
+	- 去掉表中的重复行
+- 字符匹配LIKE
+	- Sname **LIKE** '刘%' ： 姓刘的学生
+	- Sname **LIKE** '刘_' ： 姓刘且名字只有两个字的学生
+	- NOT LIKE : 与LIKE 相反
+- 转码字符关键字**ESCAPE**
+	- Cname LIKE 'DB\_' **ESCAPE** '\'
+		- 选择以'DB_'开头的课程名字
+		- ESCAPE '\' 表示'\'为换码字符
+- 使用AND，OR来连接国歌查询条件
+	- AND 的优先级大于 OR
+	- 使用括号可以改变优先级
+- 聚集函数
+	- COUNT([DINTINCT] <列名|*>)
+	- SUM([DINTINCT] <列名>)
+	- AVG([DINTINCT] <列名>)
+	- MAX([DINTINCT] <列名>)
+	- MIN([DINTINCT] <列名>)

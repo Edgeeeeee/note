@@ -62,4 +62,6 @@
 		- 一个低一级的范式，通过模式分解可以转换为若干个高一级范式的关系模式集合，这种过程就叫关系模式的规范化
 		- 一个例子
 		- [![EyxBXn.md.jpg](https://s2.ax1x.com/2019/05/08/EyxBXn.md.jpg)](https://imgchr.com/i/EyxBXn)
+		- [将R分解为BCNF且具有无损连结性](https://blog.csdn.net/panxiqie___/article/details/38899021)
+		- [判断分解是否具有无损连结性](https://www.cnblogs.com/bewolf/p/4443730.html)
 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        .box1{
+            width:100px;
+            height:100px;
+            background:green;
+            border:10px solid red;
+            padding:20px;
+            /*由此看出我们的盒子实际大小是
+                盒子的宽度=内容宽度+左右边框+padding(左右内边距)
+                盒子的高度=内容高度+上下边框+padding(上下内边距)
+            */
+
+
+
+        }
+        .box2,.box3,.box4{
+            width: 100px;
+            height:100px;
+            background:green;
+        }
+        .box3{
+            padding:20px;
+            /*想改变元素距离内容的而艰巨,但是又不想改变盒子大小*/
+            box-sizing: border-box;
+        }
+        .box4{
+            padding:20px;
+            border:20px solid red;
+
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</body>
+</html>

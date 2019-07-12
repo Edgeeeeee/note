@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体文本设置</title>
+    <style>
+        .fonts{
+            /*字体颜色 color*/
+            color:red;
+            /*color:#369; */
+            /*color:rgb(0,255,255);*/
+            /*color:rgba(0,255,0,0.5);*/
+
+            /*
+                字体大小(设置自字号) font-size
+                谷歌浏览器当中默认字体大小为16px
+                谷歌浏览器当中字体最小为12px 当设置小于12px时 也是以12px来显示
+            */
+            font-size:30px;
+            /*font-size:16px;*/
+            /*font-size:3px;*/
+
+            /*
+                设置字体 font-family
+                注意:如果你设置的字体用户系统中不存在,会以默认字体显示
+               */
+            font-family:'楷体';
+
+            /*设置文字是否是斜体 font-style":italic*/
+            font-style:italic;
+
+            /*设置粗体 font-weight:bold*/
+            font-weight:bold;
+
+            /*设置行高 line-height:*/
+            /*line-height:35px;*/
+
+            /*text-indent:首行缩进 */
+            text-indent:60px;
+            /*text-align: 设置文本水平对齐方式 */
+            text-align:center;
+
+        }
+        a{
+            /*text-decoration:none;去除元素的下划线*/
+            text-decoration:none;
+        }
+
+        .item2{
+            width:500px;
+            height:200px;
+            background-color:green;
+             /*
+                利用line-height设置单行文本的垂直居中
+               注意:在设置单行文本垂直居中的时候,值给父级元素的高度
+               */
+            line-height:200px;
+            /*text-align:设置文本水平对齐方式 center left right*/
+            /*text-align:center;*/
+            text-align:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="fonts">
+        pcolor 设置文字的颜色，如： color:red;
+        font-size 设置文字的大小，如：font-size:12px;
+        font-family 设置文字的字体，如：font-family:'微软雅黑';
+        font-style 设置字体是否倾斜，如：font-style:'normal'; 设置不倾斜，font-style:'italic';设置文字倾斜
+        font-weight 设置文字是否加粗，如：font-weight:bold; 设置加粗 font-weight:normal 设置不加粗
+
+        line-height 设置文字的行高，如：line-height:24px;
+        text-decoration 设置文字的下划线，如：text-decoration:none; 将文字下划线去掉
+        text-indent 设置文字首行缩进，如：text-indent:24px; 设置文字首行缩进24px
+        text-align 设置文字水平对齐方式，如text-align:center 设置文字水平居中
+    </div>
+    <div class="item2">
+        line-height 设置文字的行高，如：line-height:24px;
+    </div>
+    <a href="http://www.bau.com">百度</a>
+
+</body>
+</html>

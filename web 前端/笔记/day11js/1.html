@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+    <script>
+        // 1.通过系统内置的object() 去定义自己的对象
+        var obj= new Object();
+        obj.name='张三';
+        obj.sex='李四';
+        obj.say=function(){
+            console.log('你访问说话的方法')
+        }
+         // 访问成员属性
+        //console.log(obj.name);
+        // 访问成员方法
+        //obj.say();
+
+        // 2.直接定义对象
+        var Obj={
+            name:'zhangsan',
+            sex:'男',
+            age:18,
+            say:function(){
+                console.log('你吃了吗');
+            }
+        };
+        // 访问成员属性
+        //console.log(Obj.name);
+        // 访问成员方法
+        //Obj.say()
+
+        // 给Obj对象添加新的成员属性
+        //Obj.length="180cm";
+        //console.log(Obj.length)
+
+        // 3.通过构造函数来去自定义对象
+        function pen(name,sex){
+            // this 代表当前的对象
+            this.name=name;
+            this.sex=sex;
+            this.say=function(){
+                console.log(this)
+            }
+        }
+        // 实例化对象
+        var zhangsan= new pen('zhangsan','男');
+        console.log(zhangsan.name);
+        zhangsan.say();
+        // 实例化新的李四对象
+        var lisi=new pen('lisi','nan');
+        lisi.say();
+
+        console.log(this);
+
+        for(i in zhangsan){
+            console.log(zhangsan[i])
+        }
+        console.log(zhangsan.constructor)
+        var arr=['1','2','3']
+        console.log(arr.constructor)
+    </script>
+</body>
+</html>

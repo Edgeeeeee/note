@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        /*清除默认的内外边距*/
+        *{margin:0;padding:0}
+        .box1{
+            width:200px;
+            height:200px;
+            background: red;
+            /*margin:0 200px;*/
+            /*通过position:设置元素的定位
+                relative: 相对定位
+                    以元素本身位置为参考点进行偏移
+                    不会脱离文档流
+
+
+            */
+            position:relative;
+            left:300px;
+            top:100px;
+
+            /*设置定位的层级 谁在后面定位谁就在上面
+                改变层级使用 z-index:
+            */
+            z-index:2;
+        }
+        .box2{
+
+            width: 200px;
+            height: 200px;
+            background: green;
+            /*设置绝对定位
+                position:absolute;
+                    以有定位属性的父级为参考点进行偏移,
+                    如果父级元素没有定位属性,继续向上一级元素找,
+                    如果找到就以上上一级元素为参考进行偏移,
+                    如果找不到一直想向上一级寻找,
+                    如果都没有那就以body为参考点进行偏移
+                会脱离文档流,不占文档位置
+            */
+            position: absolute;
+            left:300px;
+            top:100px;
+        }
+
+        .wrap{
+            width: 500px;
+            height: 500px;
+            margin:0 100px;
+            border:1px solid red;
+            /*添加定位属性*/
+            /*position: relative;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+
+
+    <div class="wrap">
+        <div class="box2">2</div>
+        <!--<div class="box1"></div>-->
+    </div>
+</body>
+</html>

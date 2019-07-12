@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布尔值数据类型转换</title>
+</head>
+<body>
+<script>
+    // Boolean()转换成布尔值为false的情况
+        // 字符串转布尔值 为false 空字符串
+            var str='';
+            console.log(Boolean(str));
+        // 数值类型转布尔值 为false 0,0.0,NaN
+            // var num=1;
+            var num=NaN;
+            console.log(Boolean(num));
+        // 对象转布尔 为false null;
+            //var obj={name:'ll',age:24};
+            //var obj={};
+            var obj=null;
+            console.log(Boolean(obj));
+</script>
+</body>
+</html>

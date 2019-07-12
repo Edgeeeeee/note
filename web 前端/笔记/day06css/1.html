@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+        div{
+            width: 200px;
+            /*height: 200px;*/
+        }
+        .box1{
+            background: green;
+            /*浮动
+                左浮动: float:left;
+                右浮动:float:right;
+                1.浮动会让元素脱离文档流,后面不浮动的元素会占据原来的位置
+                2.停止浮动:
+                    a.碰到父级元素的边界会停止
+                    b.碰到前面有浮动的元素(紧跟在浮动元素之后排列)
+                    c.当碰到没有浮动的元素
+                3.浮动会把元素转换成行内快元素(让我元素并在一行)
+                4.当父元素没有设置固定高度时,子元素都浮动,父级元素的高度就无法被撑开
+                    给父级元素添加overflow:hidden;
+                5.当父级元素不够时,浮动元素会换行显示
+            */
+            /*float:left;*/
+            /*float:right;*/
+        }
+        .box2{
+            width:220px;
+            background:red;
+
+            /*float:left;*/
+            /*float:right;*/
+        }
+        .box3{
+            width: 220px;
+            background:yellow;
+        }
+        .box4{
+            background: blue;
+            /*float:left;*/
+        }
+
+        .wrap{
+            width:500px;
+
+            border:1px solid red;
+            overflow: hidden;
+        }
+        .item1{
+            width:100px;
+            height:100px;
+            background: #369;
+            float:left;
+        }
+        .item2{
+            width:100px;
+            height:100px;
+            background: #123;
+            float:left;
+        }
+        .item3{
+            width: 200px;
+            height:100px;
+            background: red;
+            float:left;
+        }
+        .item4{
+            width:200px;
+            height:100px;
+            background: blue;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+
+    <div class="wrap">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+</body>
+</html>

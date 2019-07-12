@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin值重合</title>
+    <style>
+        *{margin:0;padding:0}
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: #000;
+            margin-bottom:20px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin-top:10px;
+        }
+        /*
+            注意:在使用margin值的时候 我们要么都用top要么都用bottom
+                重合之后:以margin值大的为基准
+        */
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

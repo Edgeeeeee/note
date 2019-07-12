@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态绑定事件</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <button class="btn1">按钮</button>
+    <script>
+        // 绑定事件
+        //$('.btn1').click(function(){
+          //  console.log('事件绑定成功');
+        //});
+        //
+        $('.btn1').live('click',function(){
+           console.log('动态添加的元素也被绑定了事件');
+        });
+        // 在页面当中用jq动态添加一个新的元素
+            // 创建新的元素
+            var newBtn=$('<button class="btn1">这是新的按钮</button>');
+            // 将元素添加到页面当中
+            $('body').append(newBtn);
+        // 触发事件 自动触发指定的事件
+        $('.btn1').trigger('click');
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用的鼠标事件</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 单击事件 click  双击事件dblclick
+        // 鼠标按下事件 mousedown 鼠标按下时触发
+        $('div').mousedown(function(){
+            console.log('鼠标被按下了');
+        });
+        // 鼠标抬起事件 mouseup 鼠标抬起时触发的事件
+        $('div').mouseup(function(){
+            console.log('鼠标抬起了');
+        });
+        // 鼠标移入事件 mouseover 鼠标移入时触发的事件
+        $('div').mouseover(function(){
+            console.log('鼠标移入了');
+            $('div').css('background','red');
+        });
+        // 鼠标的移出事件 mouseout 鼠标移出当前元素时触发
+        $('div').mouseout(function(){
+            console.log('鼠标移出了');
+            $('div').css('background','#000');
+        });
+
+        // 鼠标移动事件 mousemove
+        $('div').mousemove(function(){
+            console.log('鼠标正在移动');
+        })
+    </script>
+</body>
+</html>

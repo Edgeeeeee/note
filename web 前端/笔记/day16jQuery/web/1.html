@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+	<script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<button>$.get</button>
+	<button>$.post</button>
+	<button>$.ajax</button>
+	<script>
+		// ajax全局配置(不推荐使用)
+		$.ajaxSetup({
+			// 设置当前脚本中又有的ajax为同步
+		    async:false
+		})
+
+		// $.get() 发送请求
+		$('button').eq(0).click(function(){
+			// 当出发单击事件时向后台请求/发送数据
+			//  第一个参数: 请求地址
+			//  第二个参数:要发送的数据(可选的)
+			//  第三各参数:请求成功后执行的函数
+			//  		data:形参 用来接收后端给我们返回的数据
+			//  第四个参数:指定返回数据的类型
+			//  	注意:如果后台返回的数据不是指定的数据类型那么就不接收
+			$.get('./cgi-bin/1.py',{username:'zhangsan',age:18},function(data){
+				console.log(data);
+			},'json');
+		})
+
+		// $.post() 
+		$('button').eq(1).click(function(){
+			$.post('./cgi-bin/1.py',{username:'lisi',age:28},function(data){
+				console.log(data);
+			},'json');
+		})
+
+		// $.ajax()
+		// 	直接传对象进去
+		$('button').eq(2).click(function(){
+			console.log($(this));
+			var i=1;
+			// ajax 默认是异步
+			$.ajax({
+				url:'./cgi-bin/1.py',   // 请求的地址
+				type:'get',				// 指定请求方式 get post
+				data:{username:'wangwu',age:60}, // 请求时携带的参数
+				dataType:'json',				// 指定返回的数据类型
+				success:function(da){          // 请求成功后调用的函数
+					console.log(da);
+					i++;
+					console.log($(this));
+				 },
+				 error:function(){
+				 	console.log('请求失败');  // 请求失败时指定的函数
+				 },
+				 timeout:2000,					// 设置请求响应的超时时间
+				 async:true, 				// true 代表异步  false 同步  默认为异步
+
+			})
+
+			console.log(i);
+		})
+	</script>
+</body>
+</html>

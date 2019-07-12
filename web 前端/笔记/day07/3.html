@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的基本使用</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <!--嵌入式-->
+    <script>
+        // 单行注释
+
+        /*
+            多行注释
+        */
+        // 弹框
+        //alert('js试用成功');
+    </script>
+
+    <!--外链式 通过script标签的src属性来引入外部js文件
+        注意:如果使用script标签外部引入js文件,
+            那么此标签当中就不能再写js程序,它会不执行
+
+    -->
+    <script src="./1.js">
+//        alert('ok');  不会执行
+    </script>
+    <!--行间样式-->
+    <!--
+        on 当..
+        click 单击
+    -->
+    <div onclick="alert('行间样式生效了')"></div>
+    <a href="javascript:alert('我是a')">点我</a>
+    <a href="javascript:void(0)" onclick="alert('我也是a')">再来点我呀</a>
+</body>
+</html>

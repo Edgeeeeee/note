@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery相关尺寸的获取</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        .item1{
+            width:300px;
+            height:300px;
+            background:red;
+            margin-left:100px;
+        }
+
+        .wrap{
+            width:800px;
+            height:800px;
+            border:1px solid red;
+            position:absolute;
+            left:100px;
+            top:100px;
+        }
+        .item2{
+            width:200px;
+            height:200px;
+            background:red;
+            /*margin-top:20px;*/
+            /*margin-left:20px;*/
+            position:absolute;
+            top:20px;
+            left:20px;
+        }
+    </style>
+</head>
+<body style="height:1500px">
+    <!--<div class="item1"></div>-->
+    <div class="wrap">
+        <div class="item2"></div>
+    </div>
+    <script>
+        // 获取元素相对于文档的偏移位置 返回的是一个对象 有left属性和 top属性
+//        var of=$('.wrap').offset();
+        //var of=$('.item2').offset();
+        //console.log(of.left,of.top);
+
+        // 获取当前元素相对于父级元素的定位 位置 (当前元素必须有position属性)
+        //var P=$('.item2').position();
+        //console.log(P.left);
+
+        // 获取当前文档的滚动距离
+        //var scro=$(document).scrollTop();
+        //console.log(scro);
+
+        // 获取元素的宽度和高度
+        //var W=$('.item2').width();
+        //var H=$('.item2').height();
+        //console.log(W,H);
+
+        // 设置元素的宽度和高度
+        //$('.item2').width(100);
+        //$('.item2').height(100);
+
+        // 获取可视区域的宽度和高度
+        //var W=$(window).width();
+        //var H=$(window).height();
+        //console.log(W,H);
+
+        // 获取文档的宽度和高度
+        var W=$(document).width();
+        var H=$(document).height();
+        console.log(W,H);
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用attr操作class</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        .item1{
+            width: 200px;
+            height: 200px;
+            border:1px solid red;
+        }
+        .item2{
+            background:green;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1"></div>
+    <script>
+        // 使用addclass添加类名  addClass 是对class属性值的操作  可以追加类名
+        //$('div').addClass('item2');
+        // 使用 attr 添加类  attr是对class属性的操作  不能追加类名  会把原来的class属性覆盖掉
+        $('div').attr('class','item2');
+    </script>
+
+</body>
+</html>

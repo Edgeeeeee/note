@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+    <script src="../day14jQuery/jquery-1.8.3.min.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        .wrap{
+            width:800px;
+            height:600px;
+            border:1px solid red;
+        }
+        .item{
+            width:100px;
+            height:100px;
+            background:pink;
+            border-radius:50%;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <button>在元素内部的尾部插入元素</button>
+    <button>在元素内部的前面插入元素</button>
+    <button>在元素外部的后面插入元素</button>
+    <button>在元素外部的前面插入元素</button>
+    <button>删除节点</button>
+    <button>清空</button>
+    <button>克隆</button>
+    <button>注意</button>
+    <div class="wrap"></div>
+
+    <script>
+        var oDiv=null;
+        // 绑定事件
+        // 在元素内部的尾部插入元素 append()  appendTo()
+        $('button').eq(0).click(function(){
+            // 调用创建和元素的函数
+            creatDiv();
+
+            // 通过appen() appenTo()方法插入一个新的元素
+                // 在元素内部的尾部插入新的元素
+                //$('.wrap').append(oDiv); // 在指定元素里面的尾部插入新的元素
+                oDiv.appendTo($('.wrap')); // 将新的元素插入到指定的元素的尾部
+
+        });
+        // 在元素内部的前面插入元素 prepend()和prependTo()
+        $('button').eq(1).click(function(){
+            // 调用穿件元素的函数
+            creatDiv();
+            //$('.wrap').prepend(oDiv); // 在指定元素里面的最前面插入新建的元素
+            oDiv.prependTo($('.wrap'));// 将新元素插入到指定元素的最前面
+        });
+
+        // 在元素外部的后面插入元素 after() insertAfter()
+        $('button').eq(2).click(function(){
+           // 调用新建元素函数
+           creatDiv();
+           //$('.wrap').after(oDiv); // 在指定元素外部的后面插入新的元素
+            oDiv.insertAfter($('.wrap'));// 将新建的元素插入到指定元素外部的后面
+        });
+        // 在元素外面的前面插入元素 before() insertBefore()
+        $('button').eq(3).click(function(){
+            // 调用新建元素的函数
+            creatDiv();
+            //$('.wrap').before(oDiv); // 在指定元素外面的前面插入新的元素
+            oDiv.insertBefore($('.wrap')); // 将新元素插入到指定元素外面的前面
+        });
+
+        // 删除节点
+        $('button').eq(4).click(function(){
+           $('.wrap').remove(); // 他可以把自己删除
+        });
+
+        // 清空元素
+        $('button').eq(5).click(function(){
+           $('.wrap').empty(); // 只是清空指定元素内部的 元素节点 不是把自己删除
+        });
+
+        // 克隆元素
+        $('button').eq(6).click(function(){
+            // 克隆元素
+                // 注意:如果单纯的只是为了克隆元素  那么里面不需要传参数
+                    //  如果需要连同元素身上的事件一起克隆,那么就给他传一个true的参数
+           var newBtn=$('button').eq(6).clone(true);
+           // 将克隆的元素插入到wrap外部的前面
+            $('.wrap').before(newBtn);
+
+        });
+
+        // 节点操作注意事项
+             // 再插入元素的时候要先进行克隆在进行插入操作 不然会把元来的元素拿走
+        $('button').eq(7).click(function(){
+            // 将第一个按钮添加到wrap中
+            //$('.wrap').append($('button').eq(0));
+            // 先克隆在插入
+            $('.wrap').append($('button').eq(0).clone());
+        });
+
+
+        // 定义随机数函数 0-255;
+        function rund(m,n){
+           return Math.floor(Math.random()*(n-m+1))+m;
+        };
+
+        // 定义穿件新元素的函数
+        function creatDiv(){
+            oDiv=$('<div class="item"></div> ');
+            oDiv.css('background','rgb('+rund(0,255)+','+rund(0,255)+','+rund(0,255)+')');
+        };
+
+    </script>
+</body>
+</html>

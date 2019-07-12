@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性操作</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <img src="" alt="大图">
+    <script>
+        // 属性操作 attr
+//        $('img').attr('src','./images/56fcd25dbb4a8.jpg');
+        // 一次添加多个属性
+        $('img').attr({src:'./images/56fcd25dbb4a8.jpg',title:'这是一张美女图'})
+        // 获取属性
+        console.log($('img').attr('title'));
+
+        // 删除属性 不指定要删除的属性是不会做任何操作
+        $('img').removeAttr('title');
+    </script>
+</body>
+</html>

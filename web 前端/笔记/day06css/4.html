@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定定位</title>
+    <style>
+        div{
+            height:500px;
+            border:1px solid red;
+        }
+        .box1{
+            width:80px;
+            height: 30px;
+            background: red;
+            /*绑定定位
+                以浏览器窗口为参考进行定位
+                主要用在:固定在头部的导航栏 返回顶部,网页的侧边栏菜单
+
+            */
+            position:fixed;
+            bottom:20px;
+            right:20px;
+        }
+    </style>
+</head>
+<body style="height:5000px">
+    <div class="box1">返回顶部</div>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</body>
+</html>

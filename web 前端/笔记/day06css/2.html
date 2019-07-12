@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        
+        .wrap{
+            border:1px solid red;
+            /*清除浮动 解决父级元素高度无法撑开问题
+                注意: 是给浮动元素的父级添加
+            */
+            /*overflow: hidden;*/
+        }
+        .cl{
+            /*clear:both;*/
+        }
+        .wrap:after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #222;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #909;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #090;
+        }
+        .box4{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #034;
+            /*清除浮动 left:清除左浮动 right:清除有浮动 both:清除左右两边的浮动*/
+            /*clear:both;*/
+            clear:right;
+        }
+        .box5{
+             width: 200px;
+            height: 200px;
+            float:left;
+            background: #987;
+        }
+        .box6{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #598;
+        }
+        .box7{
+            width: 200px;
+            height: 200px;
+            float:left;
+            background: #745;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="cl"></div>
+    </div>
+
+</body>
+</html>

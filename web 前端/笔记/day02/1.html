@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML常用的行级元素</title>
+    </head>
+    <body>
+        <!--链接标签
+            a标签 href属性,跟的是要跳转的网址
+                   target :_blank  在新窗口打开跳转的页面
+            -->
+            <!--<a href="http://www.baidu.com">百度</a>-->
+
+            <a href="./复习.html" target="_blank">跳转到本地的文件(复习.html)</a>
+
+            <!--路径问题 在实际开发当中建议使用相对路径 ./当前目录 ../上目录-->
+            <!--绝对路径 在windows当中绝对路径的根是我们文件所在的盘符
+                C:\Users\admin\Desktop\TLXY-前端课件代码\复习.html
+            -->
+            <!--通过a标签锚点的制作-->
+
+        <!--图像标签 img(但标签 不需要闭合)
+            src: 图片的地址(网络资源或者本地资源)
+            alt:用于图片加载失败的替代文字 (必须存在)
+            title:鼠标选题在图片上的提示信息(可写可不写)
+            width:设置图片的宽度
+            height:设置图片的高度
+            注意:一般我们只给图片宽度或者只设置高度,那高度或者宽度会等比例放大或者缩小
+          -->
+            <img src="http://pic1.win4000.com/wallpaper/9/56fcd25dbb4a8.jpg" width="200px" height="200px" alt="这是图片标签" title="这是一张美女高清大图">
+            <!--<img src="./images/56fcd25dbb4a8.jpg" alt="这是一张美女大图">-->
+        <br>
+        <!--文本标签-->
+            <!--加粗b strong:具有强调意义  斜体i em:斜体,具有强调意义-->
+            <b>src:</b> 图片的地址(网络资源或者本地资源)<br>
+            <i>alt:</i>用于图片加载失败的替代文字 (必须存在) <br>
+            <strong>title</strong>:鼠标选题在图片上的提示信息(可写可不写) <br>
+            <em>width:</em>设置图片的宽度 <br>
+            height:设置图片的高度 <br>
+            注意:一般我们只给图片宽度或者只设置高度,那高度或者宽度会等比例放大或者缩小 <br>
+        <!--span 无语义的行级元素 一般span标签也是配合css使用 来设置文本当中一部分内容-->
+            <span style="color:red">注意:</span>一般我们只给图片宽度或者只设置高度,那高度或者宽度会等比例放大或者缩小 <br>
+
+        <!--html当中的实体字符 &gt;:大于号 , &lt;:小于号 ,&copy; &nbsp;空格-->
+            1>2; <br>
+            1&gt;2; <br>
+            1&lt;2; <br>
+            &copy; <br>
+            注意:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一般我们只给图片宽度或者只设置高度,那高度或者宽度会等比例放大或者缩小
+    </body>
+</html>

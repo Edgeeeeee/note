@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js流程控制</title>
+</head>
+<body>
+<script>
+        // if判断语句
+        //python当中的if判断语句
+        //    if 1>10:
+        //        真区间
+        //    else:
+        //        假区间
+    // js当中的判断语句
+//    if(1>0){
+//        console.log('条件成立输出真区间里的内容')
+//    }
+
+//    if(10<0){
+//        console.log('真区间执行代码')
+//    }else{
+//        console.log('假区间执行代码')
+//    }
+//    if(1==1){
+//        console.log('1==1');
+//    }else if(1<0){
+//        console.log('1<0');
+//    }else{
+//        console.log('以上条件都不成立');
+//    }
+
+        if('1'==1){
+            console.log("'1'==1");
+        }else{
+            console.log('判断失败')
+        }
+
+        //switch()判断 必须配合case使用
+        // 注意 switch当中的参数必须是 === 全等   值相同  类型也要相同
+            var a='1';
+            switch(a){
+                // 判断条件
+                case 1:
+                    console.log("周一");
+                    break;
+                case 2:
+                    console.log('周2');
+                    break;
+                case 3:
+                    console.log('周3');
+                    break;
+                case 4:
+                    console.log('周4');
+                    break;
+                case 5:
+                    console.log('周5');
+                    break;
+                case 6:
+                    console.log('周6');
+                    break;
+                case 7:
+                    console.log('周日');
+                    break;
+                default:
+                    // 当所有的case条件都不满足时,就执行default区间的代码
+                    console.log("一周只有七天")
+            }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本操作</title>
+    <style>
+        #item1{
+            width:200px;
+            height:200px;
+            background:#990099;
+        }
+    </style>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div id="item1">123</div>
+    <script>
+        // 文本操作 会覆盖原来的内容
+            // html 可以解析标签
+            // text 不解析标签
+            // html一般用于添加内容
+            // text一般用于获取内容
+//        var oDiv=document.getElementById('item1');
+//        console.log(oDiv);
+//        oDiv.innerHTML="456";
+        $('div').html('<h1>这是新添加的内容</h1>')
+        console.log($('div').html());
+//        $('div').text('<h1>0987</h1>');
+        console.log($('div').text());
+    </script>
+</body>
+</html>

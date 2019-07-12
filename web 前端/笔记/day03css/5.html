@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        /*hover 设置鼠标悬停在元素上时的状态*/
+        .box{
+            width:200px;
+            height:200px;
+            background-color:green;
+        }
+        .box:hover{
+            /*鼠标悬停上之后的样式*/
+            background-color:red;
+            width:500px;
+            height:500px;
+        }
+
+        /* after 在元素里面的尾部插入内容*/
+        .box:after{
+            content:'ll';
+        }
+        /*before 在元素里面的头部插入内容*/
+        .box:before{
+            content:'I';
+        }
+    </style>
+</head>
+<body>
+    <div class="box">love</div>
+</body>
+</html>

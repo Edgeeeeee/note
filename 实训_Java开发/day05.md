@@ -26,3 +26,38 @@
 
 ### Apache Tomcat
 - 当今行业内最常用的应用服务器之一，可以在计算机上提供一个HTTP服务的应用
+- 基本目录
+
+		web Application Pro
+			java Resources //所有的Java源代码（src目录）以及部分配置资源文件
+			WebContent
+				WEB—INF
+					lib  // 包含项目所需的jar包
+					web.xml  // web项目的基本配置文件
+				css文件夹
+				js文件夹
+				img文件夹
+				xxxx.html
+### JSP
+- JSP(java sever page) Java服务器页面
+- jsp = html + Java脚本
+- JSP的指令元素，JSTL（Java Standard TagLib），EL（Expression Language）
+- 其他还需要了解的内容有：脚本元素，表达式元素，声明元素等等
+
+
+##### get方式和post方式请求乱码解决
+- get方式的请求中文乱码可以通过设置tomcat
+
+
+### Servlet(web应用小程序）
+- 用于接收客户端发送的请求
+- 获取请求参数
+- 相应客户端
+
+# html表单标签
+- 根标签 form
+- input 输入框 按照type不同可能是文本框，密码框，单选按钮，复选按钮，
+- select>option 下拉框
+- button 按钮（普通按钮，提交按钮， 重置表单按钮）
+- textarea 多行多列的输入框
+		

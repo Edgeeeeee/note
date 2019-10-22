@@ -381,3 +381,29 @@
 # Java Math类
 - java Math类包含了执行基本数学运算的属性和方法，如初等指数，对数，平方根和三角函数等
 - Math的方法都被定义为static形式，通过Math类可以在主函数中直接调用
+
+# JavaCharacter类
+- Character类用于对单个字符进行操作
+- Character类中包含了一个基本数据类型char
+- 实际开发过程中，经常遇到需要使用对象，而不是内置数据类型的情况，Java为内置数据类型char提供了包装类Character
+
+# Java String类
+- String类是不可改变的，所以一旦创建了String对象，那么他的值就无法改变了
+- 如果需要对字符串做很多修改，那么应该选择使用StringBuffer或Stringbuilder类
+- 常用的接口
+	- 返回长度:str.length（）
+	- 连接字符串：str1.concat(str2)，更常用的是用“+"
+
+# Java StringBuffer StringBuilder类
+- 当对字符串进行修改的时候，需要使用Stringbuffer和StringBuilder类
+- 和String不同的是，StringBuffer和StringBuilder类能够被多次的修改，并且不产生新的未使用对象。Stringbuilder在Java5中被提出，他和StringBuffer类不同的地方在于StringBuilder的方法不是线程安全的，但是StringBuilder具有速度优势
+
+
+# Java数组
+- Java语言中提供的数组是用来存储固定大小的同类型元素
+- 声明方法：
+	- dataType[] arrayRefVar;
+	- 使用new创建：arraRefVar = new datatype[size]
+
+# java 日期时间
+- Java.util包提供了date类来封装当前的日期和时间。

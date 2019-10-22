@@ -1,3 +1,3 @@
 # note
-learn note
-qq：1602278333 Edge
+- learn note
+- qq：1602278333 Edge
